@@ -1,0 +1,292 @@
+.loki-card {
+    /* ...existing code... */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+    .loki-card {
+        padding: 22px 6vw 18px 6vw;
+        max-width: 98vw;
+        border-width: 2px;
+    }
+    .loki-text {
+        font-size: 1.1rem;
+        padding: 0 2vw;
+    }
+    .loki-msg {
+        font-size: 0.95rem;
+        padding: 8px 4vw;
+    }
+    .loki-date {
+        font-size: 1.05em;
+    }
+    .loki-emoji {
+        font-size: 1.5rem;
+    }
+    .loki-always {
+        font-size: 0.9rem;
+    }
+}
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0b0e14;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    animation: fadeUp 0.8s ease both;
+}
+
+.hidden { display: none !important; }
+
+/* ERROR */
+.error-code {
+    font-family: 'Press Start 2P';
+    color: #ff4d4d;
+}
+
+.error-msg,
+.error-sub {
+    font-family: 'Share Tech Mono';
+    color: #444;
+}
+
+#secret-trigger { cursor: pointer; }
+
+/* GLASS */
+.glass-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    border: 3px solid #fff;
+    padding: 30px 20px;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Press Start 2P';
+}
+
+.proposal-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* TEXTO */
+.pixel-text { font-size: 1.2rem; margin-bottom: 15px; }
+.desc-text { font-size: 0.7rem; margin-bottom: 20px; }
+
+.glow-text {
+    animation: glowText 2.5s ease-in-out infinite;
+}
+
+@keyframes glowText {
+    0%,100% { text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+    50% { text-shadow: 0 0 25px rgba(255,77,109,0.9); }
+}
+
+/* COMIDA FLOTANDO */
+.food-container {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.food-float {
+    font-size: 2rem;
+    animation: floatFood 4s ease-in-out infinite;
+}
+
+.food-float:nth-child(2) { animation-delay: 0.5s; }
+.food-float:nth-child(3) { animation-delay: 1s; }
+.food-float:nth-child(4) { animation-delay: 1.5s; }
+.food-float:nth-child(5) { animation-delay: 2s; }
+
+@keyframes floatFood {
+    0%   { transform: translateY(0) rotate(0deg); }
+    50%  { transform: translateY(-12px) rotate(8deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* BOTONES */
+.pixel-btn {
+    padding: 18px;
+    font-family: 'Press Start 2P';
+    background: #ff4d6d;
+    border: 3px solid #fff;
+    color: white;
+    box-shadow: 4px 4px 0px #800020;
+    cursor: pointer;
+}
+
+.no-style {
+    background: #555;
+    box-shadow: 4px 4px 0px #222;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* EMOJI */
+.emoji-display { font-size: 2.5rem; margin-bottom: 20px; }
+
+/* LOKI */
+.loki-card {
+    background: rgba(255,255,255,0.18);
+    border: 3px solid #ffeb3b;
+    border-radius: 30px;
+    box-shadow: 0 0 40px 10px #ffeb3b44, 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 40px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 420px;
+    margin: 0 auto;
+    animation: lokiPop 1.2s cubic-bezier(.68,-0.55,.27,1.55) both;
+}
+.loki-text {
+    color: #ffeb3b;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 18px #fffbe6, 0 0 8px #ffeb3b;
+    word-break: break-word;
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
+    line-height: 1.2;
+}
+@media (max-width: 480px) {
+    .loki-text {
+        font-size: 1.1rem;
+        padding: 0 2vw;
+        word-break: break-word;
+        text-align: center;
+        line-height: 1.25;
+    }
+    /* ...existing code... */
+}
+.loki-glow {
+    animation: lokiGlow 2.5s ease-in-out infinite;
+}
+.loki-sub {
+    color: #fffbe6;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    margin-top: 0;
+    line-height: 1.6;
+}
+.loki-msg {
+    background: rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 10px 18px;
+    box-shadow: 0 2px 12px #ffeb3b22;
+    font-weight: bold;
+}
+.loki-date {
+    color: #ff4d6d;
+    font-size: 1.2em;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 0 0 8px #ff4d6d88;
+}
+.loki-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    animation: lokiEmojiBounce 2.2s infinite;
+}
+.loki-always {
+    color: #ffeb3b;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.1rem;
+    margin-top: 18px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #fffbe6, 0 0 4px #ffeb3b;
+}
+@keyframes lokiGlow {
+    0%,100% { text-shadow: 0 0 18px #fffbe6, 0 0 8px #ffeb3b; }
+    50% { text-shadow: 0 0 40px #ffeb3b, 0 0 18px #fffbe6; }
+}
+@keyframes lokiPop {
+    0% { transform: scale(0.7) translateY(60px); opacity: 0; }
+    60% { transform: scale(1.08) translateY(-10px); opacity: 1; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+@keyframes lokiEmojiBounce {
+    0%,100% { transform: translateY(0); }
+    30% { transform: translateY(-12px) scale(1.12); }
+    60% { transform: translateY(2px) scale(0.98); }
+}
+
+/* FONDO */
+#bg-animation {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+.bg-love {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffd1ff);
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+}
+
+/* CORAZONES CAÓTICOS */
+.heart-fall {
+    position: fixed;
+    top: -40px;
+    font-size: 1.4rem;
+    pointer-events: none;
+    animation: chaoticFall linear infinite;
+}
+
+@keyframes chaoticFall {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    25% {
+        transform: translateX(-40px) translateY(25vh) rotate(90deg);
+    }
+    50% {
+        transform: translateX(30px) translateY(50vh) rotate(180deg);
+    }
+    75% {
+        transform: translateX(-20px) translateY(75vh) rotate(270deg);
+    }
+    100% {
+        transform: translateX(40px) translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ANIMACIONES */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}

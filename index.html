@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Error 1003</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="bg-animation"></div>
+
+    <main class="container">
+
+        <!-- ERROR -->
+        <div id="error-screen" class="screen">
+            <h1 class="error-code">Error 1003</h1>
+            <p class="error-msg">&gt; Page not found</p>
+            <p class="error-sub">No puedes ingresar <span id="secret-trigger">América</span></p>
+        </div>
+
+        <!-- PROPUESTA -->
+        <div id="proposal-screen" class="screen hidden">
+            <div class="glass-card proposal-card">
+
+                <h1 class="pixel-text glow-text">¡Hola mi amor! ❤️</h1>
+                <p class="desc-text">TENGO UNA PROPUESTA ESPECIAL...</p>
+
+                <!-- COMIDA FLOTANDO -->
+                <div class="food-container">
+                    <span class="food-float">🍕</span>
+                    <span class="food-float">🍩</span>
+                    <span class="food-float">🍓</span>
+                    <span class="food-float">🍔</span>
+                    <span class="food-float">🧁</span>
+                </div>
+
+                <button id="continue-btn" class="pixel-btn">CLIC AQUÍ ✨</button>
+            </div>
+        </div>
+
+        <!-- FINAL -->
+        <div id="final-screen" class="screen hidden">
+            <div class="glass-card" id="main-card">
+                <h1 id="question-text" class="pixel-text">¿QUIERES SER MI VALENTINE?</h1>
+                <div id="emoji-container" class="emoji-display">🌹</div>
+                <div class="btn-group">
+                    <button id="yes-btn" class="pixel-btn">¡SÍ! 😍</button>
+                    <button id="no-btn" class="pixel-btn no-style">NO 😢</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- LOKI -->
+        <div id="loki-screen" class="screen hidden">
+            <div class="loki-card">
+                <div class="loki-emoji">💖✨</div>
+                <h1 class="loki-text loki-glow">TE AMO ETERNAMENTE,</h1>
+                <p class="loki-sub loki-msg">Gracias por aceptar,<br>tenemos una cita este <span class="loki-date">14 de febrero</span> 🗓️</p>
+                <div class="loki-emoji">🥰🌹</div>
+            </div>
+        </div>
+
+    </main>
+
+    <audio id="cute-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-game-ball-tap-2073.mp3"></audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
